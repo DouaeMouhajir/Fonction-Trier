@@ -1,0 +1,19 @@
+function trier(liste){
+    var i, j ,temp;
+    for(i=0; i<liste.length; i++){
+        for(j=0; j<liste.length; j++){
+            if ( liste[j]>liste[j+1]){
+                temp = liste[j];
+                liste[j] = liste[j + 1];
+                liste[j + 1] = temp;
+    }
+}
+}
+return liste;
+}
+    
+function Trierlaliste() {
+    var liste = [1, 99, 18, 27, 30, 22];
+    var resultat = trier(liste);
+    document.getElementById("resultat").innerHTML = "Liste triée : " + resultat;
+}
